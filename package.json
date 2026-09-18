@@ -1,0 +1,14 @@
+{
+  "name": "tmc-freeriderz-theme",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "css:build": "tailwindcss -i ./src/tailwind.css -o ./assets/tailwind.css --minify",
+    "css:watch": "tailwindcss -i ./src/tailwind.css -o ./assets/tailwind.css --watch=always"
+  },
+  "devDependencies": {
+    "tailwindcss": "4.3.3",
+    "@tailwindcss/cli": "4.3.3"
+  }
+}

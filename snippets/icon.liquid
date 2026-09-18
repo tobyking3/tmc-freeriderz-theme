@@ -1,0 +1,23 @@
+{% doc %}
+  Renders a Lucide icon by name. Looks up the `icon-{name}.liquid` snippet.
+
+  Available names: shopping-cart, search, menu, x, chevron-down, chevron-left,
+  chevron-right, user, heart, arrow-right, plus, minus, star, truck,
+  shield-check, mail.
+
+  To add another icon: download it from
+  https://cdn.jsdelivr.net/npm/lucide-static@<version>/icons/<name>.svg into
+  `snippets/icon-<name>.liquid`, then add a `{% if class %} {{ class }}{% endif %}`
+  merge onto its `class` attribute so this dispatcher's `class` param works.
+
+  @param {string} name - The icon name (matches a lucide-static icon name).
+  @param {string} [class] - Additional CSS classes to merge onto the <svg>.
+
+  @example
+  {% render 'icon', name: 'shopping-cart', class: 'size-5' %}
+{% enddoc %}
+
+{%- liquid
+  assign icon_snippet = 'icon-' | append: name
+-%}
+{%- render icon_snippet, class: class -%}

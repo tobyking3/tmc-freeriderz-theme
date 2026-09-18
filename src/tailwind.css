@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+/*
+ * Tailwind v4 auto-detects source files, but it walks up from this file's
+ * directory and ignores anything .gitignore'd — Liquid files live in sibling
+ * folders (sections/, blocks/, snippets/, templates/) and node_modules is
+ * ignored anyway, so these just make the scan explicit and fast.
+ */
+@source '../sections/**/*.liquid';
+@source '../blocks/**/*.liquid';
+@source '../snippets/**/*.liquid';
+@source '../templates/**/*.liquid';
+@source '../templates/**/*.json';
+@source '../layout/**/*.liquid';
+
+@theme {
+  /* Extend/override the default Tailwind theme here as the store's brand is defined. */
+}

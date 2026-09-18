@@ -1,0 +1,28 @@
+{% doc %}
+  Registers the theme's import map and boots libraries that need to run on every page.
+
+  There is no bundler in this theme — every vendored library in `assets/` that's
+  imported via a bare specifier (`@vendor/...`) must be listed here. If a new vendored
+  file itself imports another bare specifier (check for `from"some-package"` in the
+  file), that specifier needs an entry too, even if nothing else imports it directly.
+{% enddoc %}
+
+<script type="importmap">
+  {
+    "imports": {
+      "@vendor/motion": "{{ 'motion.js' | asset_url }}",
+      "motion-dom": "{{ 'motion-dom.js' | asset_url }}",
+      "motion-utils": "{{ 'motion-utils.js' | asset_url }}",
+      "@vendor/embla-carousel": "{{ 'embla-carousel.js' | asset_url }}",
+      "@vendor/alpinejs": "{{ 'alpinejs.js' | asset_url }}",
+      "@vendor/fuse": "{{ 'fuse.js' | asset_url }}"
+    }
+  }
+</script>
+
+<script type="module">
+  import Alpine from '@vendor/alpinejs';
+
+  window.Alpine = Alpine;
+  Alpine.start();
+</script>
