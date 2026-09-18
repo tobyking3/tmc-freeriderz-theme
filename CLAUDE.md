@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 > This is a living document — as sections/blocks get built out, conventions solidify, or the design system takes shape, update this file rather than letting it drift out of date. The "Current status" section at the bottom in particular should be kept current.
 
-See `BUILD_PLAN.md` for the section-by-section build checklist.
+See `BUILD_PLAN.md` for the section-by-section build checklist, and `BUSINESS.md` for what TMC Freeriderz actually is as a business (history, positioning, reputation, brand voice) — read that before making design or copy decisions.
 
 ## Project
 
